@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <link rel = "stylesheet" href= "styles.css">
+        <!-- 
+        Purpose:
+        - Title used here shows up in the browser tab
+        - Link to the favicon (small image that appears in the browser tab)
+        - Link to the CSS file (used to style the webpage)
+
+        When To Modify:
+        - [ ] Project 2 (REQUIRED FEATURE) 
+        - [ ] Project 2 (STRETCH FEATURE) (favicon)
+        - [ ] Any time after
+        -->
+        <title>Dinner Party Event Website </title>
+        <link rel="icon" href="\VSCode Edu\img\dinner_table_flowers.jpg">
+        <style>
+            /* Style rules go here. */
+
+        </style>
+    </head>
+
+<body>
+    <!-- navbar
+
+    Purpose:
+    - Navigation bar that allows users to jump to different sections of the webpage
+    - Also holds buttons for user settings (dark mode, reduce motion)
+
+    When To Modify:
+    - [ ] Project 4 (REQUIRED FEATURE)
+    - [ ] Project 5 (REQUIRED FEATURE) 
+    - [ ] Project 8 (STRETCH FEATURE) 
+    - [ ] Any time between / after
+    -->
+    <div class="navbar">
+        <ul>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Schedule">Schedule</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><button id = "theme-button">Toggle Dark Mode</button></li>
+        </ul>
+    </div>
+            <!-- headings
+
+            Purpose:
+            - Main header section of the webpage
+            - Contains the title, subtitle, image, and key buttons for the webpage
+
+            When To Modify:
+            - [ ] Project 2 (REQUIRED FEATURE) 
+            - [ ] Project 3 (REQUIRED FEATURE) 
+            - [ ] Project 4 (REQUIRED FEATURE) 
+            - [ ] Any time after
+            -->
+    <div class = "header-container"> 
+        <div class = "header-item">
+            <img id="header-img" src="\VSCode Edu\img\pexels-photo-7138895.jpeg"/>
+        </div>
+
+        <div class = "header-item"> 
+            <h1 class = "titles">Lay out the table! A Feast</h1>
+            <h2 id = "theme">Mischievousness & Marbles</h2>
+            <div class = "header-button">
+                <button type="button">All things Dietary</button>
+                <button type="button">Q&A</button>
+            </div>
+        </div>
+    </div>
+
+    <h2 id = "About" class = "titles">About the Event</h2>  <!-- can't use class = "About"-->
+
+    <div class = "About-section"> 
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/pcMuZdjDf9w?si=Fw_9iigj9m09n4Pq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <div id = "description"> 
+            <p>Have you lost your marbles? You are invited to the dinner party, hosted on the first Wednesday of 2026. Please dress in comfortably but fitting to your character! Expect twists and suprises, prepare accordingly. I plan to serve dinner, desert (hopefully to your taste).</p>
+
+            <h4>Looking forward to:</h4>
+            <ul>
+                <li> <b></b> <i>Seeing friends, family</i></li>
+                <li> <b></b> <i>Eating delicious food</i></li>
+                <li> <b></b> <i>Playing marbles</i></li>
+            </ul>
+        </div>  
+    </div>
+        
+    <h2 id = "Schedule" class = "titles">Event Schedule</h2>
+
+    <img alt="Schedule" src="\VSCode Edu\img\project-schedule.png"/>
+    <h3>The Sitting and Eating</h3>
+    <p>Feel free to write a speech!</p>
+        
+    <img alt="Image description" src="\VSCode Edu\img\table_spread.png"/>
+    <h3>Before and After</h3>
+    <p>There will be a courtyard with a garden, games, and time to catch up or relax.</p>
+
+    <img alt="Image description" src="\VSCode Edu\img\a-three-tier-courtyard-fountain.jpg"/>
+
+
+        <!-- rsvp
+
+    Purpose:
+    - Section for users to sign up for the event
+    - Contains a form for users to input their information, 
+    and a list of other users who have signed up
+
+    When To Modify:
+    - [ ] Project 6 (REQUIRED FEATURE) 
+    - [ ] Project 6 (STRETCH FEATURE) 
+    - [ ] Any time after
+    --> 
+    <div id="rsvp">
+        <h2>RSVP</h2>
+        <div class="rsvp-container">
+            <div class="rsvp-para">
+                <p> Its finally summer and everything is green! While the sun is setting, do you feel like stepping outside? Do you miss people and joy? I promise this evening will ease at least a little of that longing. Join me and my joy for sharing and cooking food and talking about it. Enjoy what's here to see (or eat)! I hope to see you soon. 
+                </p>
+            </div>
+            <div class="rsvp-participants">
+                <p>⭐ Lola has RSVP'd.</p>
+                <p> ⭐Ami has RSVP'd.</p>
+                <p> ⭐Lilly has RSVP'd.</p>
+            </div>
+        </div>
+
+        <!--- Sign RSVP Form --->
+        <div class="form-container">
+            <form id="rsvp-form" title="rsvp-form">
+                <label for = "name"> Name: </label>
+                <input type = "text" id = "name">
+                <label for = "email"> Email: </label>
+                <input type = "text" id = "email">
+                <label for = "hope"> Favorite food: </label>
+                <input type = "text" id = "hope">
+            </form>
+            <!-- Submit button -->
+            <button id="rsvp-button">Submit RSVP</button>
+        </div>      
+    </div>
+
+        <!-- success modal
+
+    Purpose:
+    - Modal that appears when a user successfully signs up for the event
+    - Contains a personalized message and image
+
+    When To Modify:
+    - [ ] Project 9 (REQUIRED FEATURE)
+    - [ ] Project 9 (STRETCH FEATURE) 
+    - [ ] Any time after
+    --> 
+
+    <div id="success-modal" class="modal">
+        <div class="modal-container">
+            <div class ="modal-item">
+                <p id = "model-text"> </p>
+            </div>
+            <div class ="modal-item">
+                <img id = "modal-image" alt = "thanks modal" src="\VSCode Edu\img\modal-image2.png"/>
+            </div>
+        </div>
+    </div>
+
+        <!-- links
+
+        Purpose:
+        - Links to other resources related to the event
+
+        When To Modify:
+        - [ ] Project 2 (STRETCH FEATURE) 
+        - [ ] Project 4 (STRETCH FEATURE) 
+        - [ ] Any time between / after
+        --> 
+    <h2 id = "links">Links</h2>
+
+    <!-- This <a> block is one link.  Copy and paste all 6 lines to create another link. -->
+    <a href="https://richmondmom.com/fun-filled-marble-games-to-try-at-your-next-family-gathering/">
+        <article>
+            <h3>Games to Play with Marbles</h3>
+            <p>Booby trap, Classic Marbles, or What Decade: find a game that interests you.</p>
+        </article>
+    </a>
+
+    <a class="block" href="https://www.asexuality.org/en/topic/266457-formal-wear-preferences/">
+        <article>
+            <h3>What's formal attire?</h3>
+            <p class = "link_descrip">Maybe check this out if you'd like help choosing what to wear to the party.</p>
+        </article>
+    </a>
+                
+    <!-- footer [PLACEHOLDER] [ADDED IN UNIT 3] -->
+    <div class = "footer">
+    <a href = "instagram.com">
+        <article>
+        <h3>Contact</h3>
+        </article>
+    </a>
+
+    <a href = "mail.google.com">
+        <article>
+        <h3>other</h3>
+        </article>
+    </a>
+    </div>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
